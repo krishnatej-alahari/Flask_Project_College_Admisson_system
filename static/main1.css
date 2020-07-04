@@ -1,0 +1,22 @@
+body{
+    background: #fafafa;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  color: #333333;
+  margin-top: 5rem;
+background-image: url('admin6.png');
+}
+.content-section {
+  background: #ffffff;
+  background-image: url(admin4.jpg);
+  background-position: centre;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image:opacity: 0.3;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}

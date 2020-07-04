@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block content %}
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main2.css') }}">
+
+    {% if title %}
+        <title>College Admission System - {{ title }}</title>
+    {% else %}
+        <title>Flask Blog</title>
+    {% endif %}
+</head>
+        <div class="student_table">
+            <table>
+                <tr>
+                    <th> College ID </th>
+                    <th> Name </th>
+                    <th> Location </th>
+                    <th> Website </th>
+                </tr>
+                {% for st in students %}
+                <tr>
+                    <td> {{ st['cid'] }}</td>
+                    <td> {{ st['cname'] }}</td>
+                    <td> {{ st['location'] }}</td>
+                    <td> <a href="{{ st['website'] }}">Click here for College Official page</a></td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+{% endblock content %}
